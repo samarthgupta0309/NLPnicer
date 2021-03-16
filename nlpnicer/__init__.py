@@ -1,0 +1,1 @@
+from nlpnicer import abbreviation, emoname, emoji, spell
