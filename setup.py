@@ -13,7 +13,7 @@ setup(
   version='5.0.1',
   description='NLPnicer helps you to handle abbreviation, emoji and spelling mistake in your text' ,
   long_description=open('README.txt').read() + '\n\n' + open('CHANGELOG.txt').read(),
-  url='',  
+  url='https://github.com/samarthgupta0309/nlpnicer',  
   author='Samarth Gupta',
   author_email='samarthgupta0309@gmail.com',
   license='MIT', 
