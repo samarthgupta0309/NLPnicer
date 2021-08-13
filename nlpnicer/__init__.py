@@ -1,1 +1,2 @@
-from nlpnicer import abbreviation, emoname, emoji, spell
+from nlpnicer import emoname
+from nlpnicer import abbreviation, emoji, spell
