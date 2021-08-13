@@ -1,28 +1,24 @@
-# to clean the file :
-import csv, re
+import re
 import os
 
+abbreviation = ['ROFL', 'STFU', 'ICYMI', 'TL;DR', 'LMK', 'NVM', 'TGIF', 'TBH', 'TBF', 'RN', 'QOTD', 'OOTD', 'BRB', 'BTW', 'LOL', 'TTYL', 'HMU', 'FWIW', 'IMO', 'IMHO', 'IDK', 'TBA', 'TBD', 'ILY', 'MCM', 'WCW', 'BF', 'GF', 'CTA', 'UGC', 'SMS', 'MMS', 'RCS', 'ROI', 'CTR', '5G']
+fullform = [' Rolling on floor laughing ', ' Shut the *swear word!* up', ' In case you missed it', ' Too long, didn’t read', ' Let me know', ' Nevermind ', ' Thank goodness it’s Friday', ' To be honest', ' To be frank', ' Right now', ' Quote of the day', ' Outfit of the day', ' Be right back', ' By the way', ' Laugh out loud', ' Talk to you later', ' Hit me up', ' For what it’s worth', ' In my opinion', ' In my humble opinion', ' I don’t know', ' To be announced', ' To be decided', ' I love you', ' Man crush Monday', ' Woman crush Wednesday', ' Boyfriend', ' Girlfriend', ' Call to action', ' User-generated content', ' Short message service', ' Multimedia messaging service', ' Rich communication services', ' Return on investment', ' Click-through rate', ' 5th generation, meaning the newest generation of mobile communications']
+
+# Translator function
 def translator(user_string):
     '''Takes the sentence replace the abbreviation words by their full form'''
     user_string = user_string.split(" ")
     j = 0
     for _str in user_string:
-        # File path which consists of Abbreviations.
-        fileName = "abbreviation.csv"
-
-        # File Access mode [Read Mode]
-        with open(fileName, "r") as myCSVfile:
-            dataFromFile = csv.reader(myCSVfile)
-            # Removing Special Characters.
-            _str = re.sub('[^a-zA-Z0-9]+', '', _str)
-            for row in dataFromFile:
-                if _str.upper() == row[0]:
-                    # If match found replace it with its appropriate phrase in text file.
-                    user_string[j] = row[1]
-            myCSVfile.close()
+        # Removing Special Characters.
+        _str = re.sub('[^a-zA-Z0-9]+', '', _str)
+        if _str.upper() in abbreviation:
+                idx = abbreviation.index(_str.upper())
+                user_string[j] = fullform[idx]
         j = j + 1
     return ' '.join(user_string)
 
+        
 class Abbreviations:
     ''' Remove the abbreviation from the sentence using 
         remove_abb.remove_abb_dataframe'''
