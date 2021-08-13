@@ -1,6 +1,6 @@
 # NLPnicer - -new way for improving data quality in NLP
 
-NLPnicer is a initiative which solves the 21st century problem of expressing yourself in emoticons or in abbreviation.
+[NLPnicer](https://pypi.org/project/nlpnicer/) is a initiative which solves the 21st century problem of expressing yourself in emoticons or in abbreviation.
 Cleaning your data is the biggest headache in a data scientist life. In Natural Language processing having emoticons, abbreviations, etc are the impurity with majority of people either drop or run a `for` loop which replaces the emoticons or abbreviation with their meaning.
 
 Imagine you're going for review sentiments and you find the case
