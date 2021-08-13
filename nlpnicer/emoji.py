@@ -1,8 +1,7 @@
 import pandas
 import os
 import re
-import emoname
-from emoname import UNICODE_EMO
+from .emoname import *
 
 def convert_emojis(text):
     for emot in UNICODE_EMO:
