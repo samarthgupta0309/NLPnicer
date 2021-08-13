@@ -2389,4 +2389,3 @@ EMO_UNICODE = {u':1st_place_medal:': u'\U0001F947',
 }
 
 UNICODE_EMO = {v: k for k, v in EMO_UNICODE.items()}
-
